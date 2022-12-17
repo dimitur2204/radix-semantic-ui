@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react'
 import { Cross2Icon } from '@radix-ui/react-icons'
-import { Dialog, FlowDialogProps } from './Dialog'
+import { Dialog, DialogProps } from './Dialog'
 
 const meta = {
     title: 'Example/Dialog',
@@ -16,7 +16,7 @@ const meta = {
 export default meta
 
 export const Default: StoryFn<typeof Dialog> = (
-    args: Omit<FlowDialogProps, 'trigger'>
+    args: Omit<DialogProps, 'trigger'>
 ) => {
     return (
         <Dialog

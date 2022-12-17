@@ -44,17 +44,19 @@ const Content: React.FC<
     </RadixDialog.Content>
 )
 
-export interface FlowDialogProps extends React.PropsWithChildren {
+export interface DialogProps
+    extends React.PropsWithChildren<RadixDialog.DialogProps> {
     trigger: React.ReactNode
     size?: 'small' | 'medium' | 'large' | 'huge'
 }
 
-const FlowDialog: React.FC<FlowDialogProps> = ({
+const FlowDialog: React.FC<DialogProps> = ({
     trigger,
     children,
     size = 'medium',
+    ...props
 }) => (
-    <RadixDialog.Root>
+    <RadixDialog.Root {...props}>
         <Trigger>{trigger}</Trigger>
         <RadixDialog.Portal>
             <RadixDialog.Overlay className="DialogOverlay" />
