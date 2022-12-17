@@ -6,6 +6,7 @@
     animation-duration: 0.5s;
     transition: background-color 0.5s linear;
 }
+
 .DialogContent {
     background-color: white;
     border-radius: 0.28571429rem;
@@ -16,8 +17,21 @@
     width: 90vw;
     max-width: 450px;
     max-height: 85vh;
-  }
-  .DialogTitle{
+}
+
+.DialogContent.small {
+    max-width: 300px;
+}
+
+.DialogContent.large {
+    max-width: 600px;
+}
+
+.DialogContent.huge {
+    max-width: 800px;
+}
+
+.DialogTitle {
     font-size: 1.42857143rem;
     line-height: 1.28571429em;
     font-weight: bold;
@@ -25,11 +39,12 @@
     margin: 0;
     color: rgba(0, 0, 0, 0.85);
     border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-  }
-  .DialogFooter{
+}
+
+.DialogFooter {
     padding: 1.25rem 1.5rem;
     margin: 0;
-    background-color: #F9FAFB;
+    background-color: #f9fafb;
     padding: 1rem 1rem;
     border-top: 1px solid rgba(34, 36, 38, 0.15);
-  }
+}

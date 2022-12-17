@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryFn } from '@storybook/react'
 import { Cross2Icon } from '@radix-ui/react-icons'
-import { Dialog } from './Dialog'
+import { Dialog, FlowDialogProps } from './Dialog'
 
 const meta = {
     title: 'Example/Dialog',
@@ -14,11 +14,15 @@ const meta = {
 } satisfies Meta<typeof Dialog>
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const LoggedIn = () => {
+export const Default: StoryFn<typeof Dialog> = (
+    args: Omit<FlowDialogProps, 'trigger'>
+) => {
     return (
-        <Dialog trigger={<button className="Button">Edit profile</button>}>
+        <Dialog
+            trigger={<button className="Button">Edit profile</button>}
+            {...args}
+        >
             <Dialog.Title>
                 Edit profile{' '}
                 <Dialog.Close>
@@ -62,5 +66,3 @@ export const LoggedIn = () => {
         </Dialog>
     )
 }
-
-export const LoggedOut: Story = {}
