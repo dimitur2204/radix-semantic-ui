@@ -1,5 +1,4 @@
 import * as RadixDialog from '@radix-ui/react-dialog'
-import React from 'react'
 import './Dialog.css'
 
 type DivWithChildren<T = {}> = React.PropsWithChildren<

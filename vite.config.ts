@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 // vite.config.ts
 import typescript from '@rollup/plugin-typescript'
 import path from 'path'
@@ -13,10 +12,10 @@ export default defineConfig({
         lib: {
             entry: path.resolve(__dirname, 'src/main.ts'),
             fileName: 'main',
-            formats: ['es', 'cjs'],
+            name: 'radix-semantic-ui',
         },
         rollupOptions: {
-            external: [],
+            external: ['react', 'react-dom'],
             plugins: [
                 typescript({
                     sourceMap: false,
