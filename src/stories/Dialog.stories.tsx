@@ -1,6 +1,6 @@
 import type { Meta, StoryFn } from '@storybook/react'
 import { Cross2Icon } from '@radix-ui/react-icons'
-import { Dialog, DialogProps } from './Dialog'
+import { Dialog, DialogProps } from '../components/Dialog/Dialog'
 
 const meta = {
     title: 'Example/Dialog',
